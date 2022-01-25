@@ -1,6 +1,5 @@
 const dataModel = require('./datamodel.js');
 const settings = {
-    port: 8080,
     filePath: 'data/cities.json'
 }
 
@@ -38,7 +37,8 @@ app.get('/api/cities', (req, res) => {
         return res.status(200).send(req.cities);
     });
 
+const port = process.env.PORT || 8080;
 app.listen(
-    settings.port,
-    () => { console.log(`Listening to ${settings.port}...`); }
+    port,
+    () => { console.log(`Listening to ${port}...`); }
 );
