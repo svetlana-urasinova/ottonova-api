@@ -2,10 +2,10 @@
   "name": "ottonova-challenge-api",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "modules/server.js",
   "scripts": {
     "test": "jest",
-    "start": "node server"
+    "start": "node modules/server"
   },
   "keywords": [],
   "author": "Svetlana Urasinova",

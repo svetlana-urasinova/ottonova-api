@@ -1,5 +1,5 @@
 import 'regenerator-runtime/runtime';
-import app from '../app.js';
+import app from '../modules/app.js';
 
 describe('/api/cities', () => {
     const request = require('supertest');
