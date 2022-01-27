@@ -2,16 +2,28 @@
   "name": "ottonova-challenge-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "test": "jest",
+    "start": "node server"
   },
   "keywords": [],
   "author": "Svetlana Urasinova",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
     "cors": "^2.8.5",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "jest": "^27.4.7",
+    "jsdom": "^19.0.0",
+    "node-mocks-http": "^1.11.0",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "devDependencies": {
+    "supertest": "^6.2.2"
   }
 }
