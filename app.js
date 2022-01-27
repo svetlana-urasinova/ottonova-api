@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const repository = require('./repository.js');
+const dao = require('./dao.js');
 const settings = require('./settings.js');
 
 app.use(cors());
@@ -9,8 +9,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
+    // now get all data from json
+    // can for example use some class to get data from db
     const path = settings.filePath;
-    const dataPromise = repository.get(path);
+    const dataPromise = dao.get(path);
     dataPromise
         .then(response => {
             const data = {};
